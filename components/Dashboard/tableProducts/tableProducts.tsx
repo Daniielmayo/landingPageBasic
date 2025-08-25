@@ -221,10 +221,10 @@ export default function TableProducts() {
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu>
-                  <DropdownItem onClick={() => updateProduct(product)}>
+                  <DropdownItem  key={product._id} onClick={() => updateProduct(product)}>
                     Edit
                   </DropdownItem>
-                  <DropdownItem onClick={() => handleDelete(product._id)}>
+                  <DropdownItem key={product._id} onClick={() => handleDelete(product._id)}>
                     Delete
                   </DropdownItem>
                 </DropdownMenu>

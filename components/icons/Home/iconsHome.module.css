@@ -1,0 +1,22 @@
+.icons-arrows {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+@media (width >=48rem) {
+  .icons-arrows {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+@media (width >= 64rem) {
+  .icons-arrows {
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1.5);
+  }
+}

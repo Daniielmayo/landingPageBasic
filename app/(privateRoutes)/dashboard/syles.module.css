@@ -1,0 +1,19 @@
+/* .sidebar-layout{
+    background-color: red;
+    height: (100% - 64px);
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    top: 0;
+
+} */
+
+@media (width >= 48rem) {
+  .sidebar-layout {
+    background-color: var(--lightGray);
+    min-height: 100vh;
+    height: (100% - 64px);
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    top: 0;
+  }
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: "Montserrat", sans-serif;
+}
+
+:root {
+  /* Typography */
+  --primaryFont: "Montserrat", sans-serif;
+  /* Font size */
+  /* mobile */
+  --fontSize-buttons_mobile: 1rem;
+  --fontSize-superTitles_mobile: 1.7rem;
+  --fontSize-titles_mobile: 1.5rem;
+  --fontSize-subtitles_mobile: 1.125rem;
+  --fontSize-paragraph_mobile: 1rem;
+  /* tablet */
+  --fontSize-buttons_tablet: 1rem;
+  --fontSize-superTitles_tablet: 2rem;
+  --fontSize-titles_tablet: 1.75rem;
+  --fontSize-subtitles_tablet: 1.65rem;
+  --fontSize-paragraph_tablet: 1rem;
+  /* laptop */
+  --fontSize-buttons_laptop: 1.125rem;
+  --fontSize-superTitles_laptop: 3rem;
+  --fontSize-titles_laptop: 2rem;
+  --fontSize-subtitles_laptop: 1.75rem;
+  --fontSize-trasitionLabel_laptop: 1.35rem;
+  --fontSize-paragraph_laptop: 1.25rem;
+  /* desktop */
+  --fontSize-buttons_desktop: 1.25rem;
+  --fontSize-superTitles_desktop: 3.5rem;
+  --fontSize-titles_desktop: 2.5rem;
+  --fontSize-subtitles_desktop: 2rem;
+  --fontSize-paragraph_desktop: 1.375rem;
+  /* Letters colors */
+  --white: #fcfcfc;
+  --black: #222222;
+  --yellow: #fad047;
+  --yellow4life: #ffb142;
+  --blue: #008ecc;
+  --darkGray: #707070;
+  /* Design colors */
+  --white: #fcfcfc;
+  --white-transparent: #ffffffbe;
+  --black: black;
+  --gray: #bbbbbb;
+  --grayGradient: #dad8d8e6;
+  --lightGray: #f8f7f7;
+  --darkGray: #707070;
+  --darkGrayGradient: #707070a2;
+  --red: #ed3426;
+  --yellow: #fad047;
+  --blue: #008ecc;
+  --green: #67c65f;
+  /* Others */
+  --border: solid 0.02rem;
+  --borderRadius: 0.3rem;
+  --transition: 500ms;
+  --transform: scale(1.05);
+}

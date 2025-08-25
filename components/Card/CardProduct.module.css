@@ -1,0 +1,7 @@
+.cardProduct {
+  transition: color 0.3s ease;
+}
+
+.cardProduct:hover h3:first-of-type {
+  color: var(--blue);
+}

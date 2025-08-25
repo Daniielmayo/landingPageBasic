@@ -1,0 +1,18 @@
+
+.sidebar__button--item {
+  transition: color 0.3s ease;
+  padding: 0.3rem;
+  /* width: 2rem; */
+  font-weight: bold;
+}
+
+.sidebar__button--item:hover {
+  color: var(--blue);
+  font-weight: bold;
+  transform: scaleX(1);
+}
+
+.active {
+  font-weight: bold;
+  color: var(--blue);
+}

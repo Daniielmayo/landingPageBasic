@@ -12,26 +12,48 @@ const handler = NextAuth({
         password: { label: "Password", type: "password", placeholder: "****" },
       },
       async authorize(credentials, req) {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth`, {
-          method: "POST",
-          body: JSON.stringify({
-            email: credentials?.email,
-            password: credentials?.password,
-          }),
-          headers: { "Content-Type": "application/json" },
-        });
-        const user = await res.json();
+        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
-        if (!user.ok) {
-          console.error(user.error.msg);
-          return Swal.fire({
-            icon: "error",
-            title: user.msg || "Error en autenticación",
-            text: "Error en autenticación",
-          });
+        if (!backendUrl) {
+          console.error("La variable de entorno NEXT_PUBLIC_BACKEND_URL no está definida.");
+          return null;
         }
 
-        return user;
+        try {
+          new URL(backendUrl);
+        } catch (error) {
+          console.error(`La URL del backend proporcionada ('${backendUrl}') no es una URL válida.`);
+          return null;
+        }
+
+        try {
+          const res = await fetch(`${backendUrl}/auth`, {
+            method: "POST",
+            body: JSON.stringify({
+              email: credentials?.email,
+              password: credentials?.password,
+            }),
+            headers: { "Content-Type": "application/json" },
+          });
+
+          if (!res.ok) {
+            const errorBody = await res.text();
+            console.error(`Error de autenticación del backend: ${res.status} ${res.statusText}`, errorBody);
+            return null;
+          }
+
+          const user = await res.json();
+
+          if (user) {
+            return user;
+          }
+          
+          return null;
+
+        } catch (error) {
+          console.error("Error al conectar con el servicio de autenticación:", error);
+          return null;
+        }
       },
     }),
   ],

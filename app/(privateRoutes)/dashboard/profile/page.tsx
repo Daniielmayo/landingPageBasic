@@ -1,5 +1,6 @@
 import { Profile } from "@/components/Dashboard/Profile/Profile";
-import React from "react";
+
+export const dynamic = "force-dynamic";
 
 const ProfilePage = () => {
   return <Profile />;

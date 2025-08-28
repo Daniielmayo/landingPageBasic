@@ -1,5 +1,6 @@
-import { UpdateProduct } from '@/components/Dashboard/updateProducts/UpdateProduct';
-import React from 'react'
+import { UpdateProduct } from "@/components/Dashboard/updateProducts/UpdateProduct";
+
+export const dynamic = "force-dynamic";
 
 const UpdateProducts = () => {
   return (

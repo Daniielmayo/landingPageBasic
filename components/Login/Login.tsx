@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Input } from "@nextui-org/react";
+import { Input } from "@heroui/react";
 import { EyeSlashFilledIcon } from "../icons/Login/EyeSlashfilledIcon";
 import { EyeFilledIcon } from "../icons/Login/EyeFilledICon";
 import { Button } from "../Button/Button";

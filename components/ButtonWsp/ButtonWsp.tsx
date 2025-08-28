@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { WspIcon } from "../icons/Home/WspIcon";
 import styles from "./ButtonWsp.module.css";
 import Link from "next/link";

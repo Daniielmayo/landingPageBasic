@@ -16,7 +16,7 @@ import {
   Pagination,
   Selection,
   Avatar,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { PlusIcon } from "../../icons/Dashboard/PlusIcon";
 import { VerticalDotsIcon } from "../../icons/Dashboard/VerticalDotsIcon";
 import { SearchIcon } from "../../icons/Dashboard/SearchIcon";

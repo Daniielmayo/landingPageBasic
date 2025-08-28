@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Input } from "@nextui-org/react";
+import { Input } from "@heroui/react";
 import { SearchIcon } from "../icons/icons";
 import { log } from "console";
 
@@ -23,6 +23,7 @@ export const SearchInput: React.FC<Props> = ({ onSearch }) => {
   };
   return (
     // <div>
+    // </div>
     <Input
       isClearable
       radius="lg"
@@ -59,6 +60,5 @@ export const SearchInput: React.FC<Props> = ({ onSearch }) => {
       onChange={handleChange}
       onClear={handleClear}
     />
-    // </div>
   );
 };

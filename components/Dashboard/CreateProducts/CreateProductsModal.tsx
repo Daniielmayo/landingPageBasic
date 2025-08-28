@@ -9,7 +9,7 @@
 //   Button,
 //   useDisclosure,
 //   Input,
-// } from "@nextui-org/react";
+// } from "@heroui/react";
 // import Swal from "sweetalert2";
 // import { createProduct } from "@/services/products/postCreateProduct";
 // import { PlusIcon } from "../icons/Dashboard/PlusIcon";
@@ -185,7 +185,7 @@
 //                 <Input
 //                   type="url"
 //                   label="url del prodcuto 4life"
-//                   placeholder="nextui.org"
+//                   placeholder="heroui.org"
 //                   labelPlacement="inside"
 //                   startContent={
 //                     <div className="pointer-events-none flex items-center">

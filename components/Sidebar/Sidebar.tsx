@@ -8,7 +8,7 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/react";
+} from "@heroui/react";
 
 import Link from "next/link";
 import styles from "./Sidebar.module.css";

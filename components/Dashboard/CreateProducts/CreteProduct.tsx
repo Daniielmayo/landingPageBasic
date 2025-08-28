@@ -1,6 +1,6 @@
 "use client";
-import { Button } from "@nextui-org/button";
-import { Input, Textarea } from "@nextui-org/input";
+import { Button } from "@heroui/button";
+import { Input, Textarea } from "@heroui/input";
 import styles from "./CreateProudct.module.css";
 import { useState } from "react";
 import { createProduct } from "@/services/products/postCreateProduct";

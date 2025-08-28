@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Image, Input, Textarea } from "@nextui-org/react";
+import { Button, Image, Input, Textarea } from "@heroui/react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";

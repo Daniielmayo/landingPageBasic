@@ -156,7 +156,7 @@ export const Profile = () => {
             placeholder=""
             // label="Contraseña"
             errorMessage="La contraseña es obligatorio"
-            onChange={(event) => setCurrentPassword(event.target.value)}
+            onChange={(event: any) => setCurrentPassword(event.target.value)}
             color="primary"
             size={"md"}
             endContent={
@@ -183,7 +183,7 @@ export const Profile = () => {
             value={password}
             placeholder=""
             errorMessage="La contraseña es obligatorio"
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(event: any) => setPassword(event.target.value)}
             color="primary"
             size={"md"}
             endContent={
@@ -210,7 +210,7 @@ export const Profile = () => {
             value={password2}
             placeholder=""
             errorMessage="La contraseña es obligatorio"
-            onChange={(event) => setPassword2(event.target.value)}
+            onChange={(event: any) => setPassword2(event.target.value)}
             color="primary"
             size={"md"}
             endContent={

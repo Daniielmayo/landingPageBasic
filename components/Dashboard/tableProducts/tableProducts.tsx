@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import {
   Table,
   TableHeader,
@@ -53,7 +53,7 @@ export interface ProductSelected {
   createdAt: string;
   updatedAt: string;
   __v: number;
-  link4lifeProduct:string;
+  link4lifeProduct: string;
 }
 
 export default function TableProducts() {
@@ -66,7 +66,7 @@ export default function TableProducts() {
 
   const [filterValue, setFilterValue] = React.useState("");
 
-  const [visibleColumns, setVisibleColumns] = React.useState<Selection>(
+  const [visibleColumns, setVisibleColumns] = React.useState<Set<string>>(
     new Set(INITIAL_VISIBLE_COLUMNS)
   );
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -198,7 +198,7 @@ export default function TableProducts() {
     router.push(`/dashboard/updateProduct`);
   };
 
-  const renderCell = React.useCallback(
+  const renderCell = useCallback(
     (product: any, columnKey: string | number) => {
       const cellValue = product[columnKey];
 
@@ -210,8 +210,6 @@ export default function TableProducts() {
         case "descriptionProduct":
           return <span>{cellValue}</span>;
         case "actions":
-
-        
           return (
             <div className="relative flex justify-end items-center gap-2">
               <Dropdown>
@@ -221,10 +219,16 @@ export default function TableProducts() {
                   </Button>
                 </DropdownTrigger>
                 <DropdownMenu>
-                  <DropdownItem  key={product._id} onClick={() => updateProduct(product)}>
+                  <DropdownItem
+                    key={product._id}
+                    onClick={() => updateProduct(product)}
+                  >
                     Edit
                   </DropdownItem>
-                  <DropdownItem key={product._id} onClick={() => handleDelete(product._id)}>
+                  <DropdownItem
+                    key={product._id}
+                    onClick={() => handleDelete(product._id)}
+                  >
                     Delete
                   </DropdownItem>
                 </DropdownMenu>
@@ -235,7 +239,7 @@ export default function TableProducts() {
           return <span>{cellValue}</span>;
       }
     },
-    []
+    [updateProduct, handleDelete] // ← dependencias usadas dentro de la función
   );
 
   const handleOpenModal = () => {
@@ -297,7 +301,7 @@ export default function TableProducts() {
             <TableRow key={product._id}>
               {Array.from(visibleColumns).map((columnKey) => (
                 <TableCell key={columnKey}>
-                  {renderCell(product, columnKey)}
+                  {renderCell(product, columnKey as string)}
                 </TableCell>
               ))}
             </TableRow>

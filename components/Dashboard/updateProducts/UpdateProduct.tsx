@@ -150,7 +150,7 @@ export const UpdateProduct = () => {
             <Input
               color="default"
               value={modifiedData.nameProduct || productData.nameProduct}
-              onChange={(e) => handleChange("nameProduct", e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange("nameProduct", e.target.value)}
             />
           ) : (
             <span>{productData.nameProduct}</span>
@@ -180,7 +180,7 @@ export const UpdateProduct = () => {
                   modifiedData.descriptionProduct ||
                   productData.descriptionProduct
                 }
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   handleChange("descriptionProduct", e.target.value)
                 }
               />
@@ -208,7 +208,7 @@ export const UpdateProduct = () => {
               value={
                 modifiedData.price?.toString() || productData.price.toString()
               }
-              onChange={(e) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 handleChange("price", parseFloat(e.target.value))
               }
               color="default"
@@ -228,7 +228,7 @@ export const UpdateProduct = () => {
                 productData.priceOff?.toString() ||
                 ""
               }
-              onChange={(e) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 handleChange("priceOff", parseFloat(e.target.value))
               }
               color="default"
@@ -246,7 +246,7 @@ export const UpdateProduct = () => {
                 productData.saving?.toString() ||
                 ""
               }
-              onChange={(e) =>
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 handleChange("saving", parseFloat(e.target.value))
               }
               color="default"
@@ -264,7 +264,7 @@ export const UpdateProduct = () => {
               value={
                 modifiedData.link4lifeProduct || productData.link4lifeProduct
               }
-              onChange={(e) => handleChange("link4lifeProduct", e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange("link4lifeProduct", e.target.value)}
               color="default"
             />
           ) : (

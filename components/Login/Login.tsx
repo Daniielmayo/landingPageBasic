@@ -86,7 +86,7 @@ export const Login = () => {
           errorMessage="El emailes obligatorio"
           placeholder=" "
           label="Correo Electrónico"
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => setEmail(event.target.value)}
           labelPlacement={"inside"}
           size={"md"}
         />
@@ -97,7 +97,7 @@ export const Login = () => {
           placeholder=""
           label="Contraseña"
           errorMessage="La contraseña es obligatorio"
-          onChange={(event) => setPassword(event.target.value)}
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) => setPassword(event.target.value)}
           size={"md"}
           endContent={
             <button

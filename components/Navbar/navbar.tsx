@@ -16,7 +16,6 @@ import { usePathname } from "next/navigation";
 import { PhotoProfile } from "../PhotoProfile/PhotoProfile";
 import Image from "next/image";
 
-
 export const NavbarTop = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathName = usePathname();
@@ -42,21 +41,20 @@ export const NavbarTop = () => {
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent className="lg:flex flex-col justify-center items-center">
+      <NavbarContent className="lg:flex flex-col w-full justify-center items-center background-red">
         <NavbarContent className={styles["navbarTop__container"]}>
           <NavbarContent>
             <NavbarBrand>
               <PhotoProfile />
               <div className="flex flex-col">
-                <Image 
-                src="https://asset.brandfetch.io/idK7lnk14C/idYCTmDC_y.png?updated=1709234346771" 
-                alt="4life" 
-                width={40}
-                height={40}
+                <Image
+                  src="https://asset.brandfetch.io/idK7lnk14C/idYCTmDC_y.png?updated=1709234346771"
+                  alt="4life"
+                  width={40}
+                  height={40}
                 />
-              <p className="font-bold text-inherit">Virginia Martinez</p>
-              <p className="text-xs ">Distribuidor autorizado  </p>
-              
+                <p className="font-bold text-inherit">Virginia Martinez</p>
+                <p className="text-xs ">Distribuidor autorizado </p>
               </div>
             </NavbarBrand>
           </NavbarContent>

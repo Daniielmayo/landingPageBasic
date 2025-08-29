@@ -1,5 +1,5 @@
 "use client";
-import { Button, Image, Input } from "@heroui/react";
+import { Button } from "@heroui/button";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import { EyeSlashFilledIcon } from "@/components/icons/Login/EyeSlashfilledIcon"
 import { EyeFilledIcon } from "@/components/icons/Login/EyeFilledICon";
 import { changePassword } from "@/services/user/putChangePassword";
 import { useRouter } from "next/navigation";
+import { Input } from "@heroui/input";
 
 interface UserData {
   name: string;

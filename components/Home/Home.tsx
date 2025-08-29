@@ -115,7 +115,7 @@ export const Home = () => {
           Productos destacados
         </h2>
         <div></div>
-        <div className={styles["home__content-card--featuredProduct"]}>
+        <>
           {products.slice(0, 6).map((product, index) => (
             <CardProduct
               src={product.imageProduct}
@@ -126,7 +126,7 @@ export const Home = () => {
               key={index}
             />
           ))}
-        </div>
+        </>
         <div className={styles["home__content-button--featuredProduct"]}>
           <Link
             href={"/products"}
@@ -252,7 +252,7 @@ export const Home = () => {
             </span>{" "}
             explora una nueva oportunidad de ingresos y alcanzar tu libertad
             financiera. Escríbeme para darte toda la información.
-          </p>     
+          </p>
           <ButtonWsp />
         </div>
       </div>
